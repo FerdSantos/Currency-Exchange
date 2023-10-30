@@ -112,6 +112,14 @@ print(currencyRate('EUR', 'USD', '01/01/2010'))
 
 This will attempt to retrieve the exchange rate for the specified date. If the data is not available, the script will update it and try the query again.
 
+
+
+## Currencies available:
+
+'US Dollar', 'Euro', 'United Arab Emirates Dirham', 'Danish Krone', 'British Pound', 'Malaysian Ringgit', 'Nigerian Naira', 'Norwegian Krone', 'Chinese Yuan', 'Hungarian Forint', 'Czech Koruna', 'Polish Zloty', 'Romanian Leu', 'Swedish Krona', 'Thai Baht', 'Australian Dollar', 'Indian Rupee', 'Moroccan Dirham', 'New Zealand Dollar', 'Omani Rial', 'Albanian Lek', 'Bulgarian Lev', 'Croatian Kuna', 'Icelandic Krona', 'Kazakhstan Tenge', 'Macedonian Denar', 'Moldovan Leu', 'Russian Rouble', 'Swiss Franc', 'Turkish Lira', 'Ukraine Hryvnia', 'Argentine Peso', 'Aruba Florin', 'Bahamian Dollar', 'Barbadian Dollar', 'Belize Dollar', 'Bermuda Dollar', 'Bolivian Boliviano', 'Brazilian Real', 'Canadian Dollar', 'Cayman Islands Dollar', 'Chilean Peso', 'Colombian Peso', 'Costa Rica Colon', 'Dominican Peso', 'East Caribbean Dollar', 'El Salvador Colon', 'Fiji Dollar', 'Guatemala Quetzal', 'Haiti Gourde', 'Honduras Lempira', 'Jamaican Dollar', 'Mexican Peso', 'Neth Antilles Guilder', 'Panamanian Balboa', 'Paraguayan Guarani', 'Peruvian Nuevo Sol', 'Swaziland Lilageni', 'Trinidad Tobago Dollar', 'Uruguayan New Peso', 'Venezuelan bolivar', 'Australian Dollar', 'Bangladesh Taka', 'Bhutan 
+Ngultrum', 'Brunei Dollar', 'Indonesian Rupiah', 'Japanese Yen', 'Macau Pataca', 'Nepalese Rupee', 'Pacific Franc', 'Pakistani Rupee', 'Papua New Guinea Kina', 'Philippine Peso', 'Seychelles Rupee', 'Singapore Dollar', 'Solomon Islands Dollar', 'South Korean Won', 'Sri Lankan Rupee', 'Taiwan Dollar', 'Thai Baht', 'Vanuatu Vatu', 'Egyptian Pound', 'Hong Kong Dollar', 'Iran Rial', 'Iraqi Dinar', 'Kuwaiti Dinar', 'Qatari Riyal', 'Yemen Riyal', 'Saudi Riyal', 'Algerian Dinar', 'Rwanda Franc', 'Tunisian Dinar', 'Israeli Sheqel', 'Jordanian Dinar', 'Lebanese Pound', 'Mongolian Tugrik', 'Burundi Franc', 'Central African CFA franc', 'Comoros Franc', 'Ethiopian Birr', 'Gambian Dalasi', 'Guinea Franc', 'Kenyan Shilling', 'Lesotho Loti', 'Malawi Kwacha', 'Mauritius Rupee', 'Namibian Dollar', 'Nicaragua Cordoba', 'Samoa Tala', 'Sierra Leone Leone', 'South African Rand', 'Tanzanian Shilling', 'Tonga Paanga', 'Ugandan Shilling', 'West African CFA franc'
+
+
 ## Note
 
 - The script assumes that the historical exchange rate data is stored in text files with filenames like "Currency Exchange History - Base EUR.txt." You can modify the filename as needed.

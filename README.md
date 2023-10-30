@@ -59,7 +59,66 @@ if __name__ == "__main__":
 
 This will scrape and update the exchange rate history for 'EUR' against a list of other currencies, saving the data to a text file.
 
+
+# Currency Exchange Rate Query
+
+This Python script allows you to query historical currency exchange rates using data collected and saved by the "Currency Exchange Rate History Scraper" script provided earlier.
+
+## Prerequisites
+
+Before using this script, make sure you have the following prerequisites:
+
+- Python 3.x
+- The `datetime` module
+- The `webscrapALL` module, which should contain the `updateCurrencyHistory` function from the previous script.
+
+## Usage
+
+1. Import the necessary modules and functions:
+
+   ```python
+   from datetime import datetime
+   from webscrapALL import updateCurrencyHistory
+   ```
+
+2. Define the `currencyRate` function to query historical exchange rates. This function takes three parameters: `currencyBase`, `currencyQuote`, and `date`.
+
+   ```python
+   def currencyRate(currencyBase, currencyQuote, date):
+       # Function code here
+   ```
+
+3. The script attempts to load existing exchange rate data from the text file "Currency Exchange History - Base {currencyBase}.txt." It then checks if the requested exchange rate data is available for the given date.
+
+4. If the data is available, the script returns the exchange rate for the requested date.
+
+5. If the data is not available for the requested date, the script tries to format the date in different formats to match the stored data. If none of the date formats match, it returns "Invalid date format."
+
+6. If the date format is valid but the data is not available, the script attempts to update the exchange rate data for the missing date using the `updateCurrencyHistory` function and then queries the data again recursively.
+
+7. If the text file is empty or not found, the script assumes there is no existing data and attempts to update the data for the missing date using the `updateCurrencyHistory` function and then queries the data again recursively.
+
+8. If the text file is not found at all, the script assumes there is no existing data and proceeds to update the data for the missing date using the `updateCurrencyHistory` function and then queries the data again recursively.
+
+9. The example usage at the end of the script demonstrates how to use the `currencyRate` function to query the exchange rate for the base currency 'EUR' against the quote currency 'USD' on the date '01/01/2010'.
+
+## Example Usage
+
+To query the historical exchange rate for 'EUR' against 'USD' on the date '01/01/2010', you can use the `currencyRate` function as follows:
+
+```python
+print(currencyRate('EUR', 'USD', '01/01/2010'))
+```
+
+This will attempt to retrieve the exchange rate for the specified date. If the data is not available, the script will update it and try the query again.
+
 ## Note
+
+- The script assumes that the historical exchange rate data is stored in text files with filenames like "Currency Exchange History - Base EUR.txt." You can modify the filename as needed.
+
+- The script deals with various date formats to ensure compatibility with the stored data. If you encounter issues with date formatting, you can adjust the format in the script.
+
+- Make sure that the `webscrapALL` module contains the `updateCurrencyHistory` function to update the currency exchange rate data.
 
 - The script may take some time to run, depending on the number of target currencies and the range of dates to collect.
 
